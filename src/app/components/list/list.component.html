@@ -1,0 +1,23 @@
+
+<ng-container *ngIf="!ListWithFilter">
+    <ol class="list-group">
+    <li class="list-group-item" (click)="FilterFn(Africa)" >Africa</li>
+    <li class="list-group-item" (click)="FilterFn(Americas)" >Americas</li>
+    <li class="list-group-item" (click)="FilterFn(Asia)" >Asia</li>
+    <li class="list-group-item" (click)="FilterFn(Europe)" >Europe</li>
+    <li class="list-group-item" (click)="FilterFn(Oceania)" >Oceania</li>
+</ol>
+</ng-container>
+
+<ng-container *ngIf="ListWithFilter">
+    <div class="row" style="margin-top:40px">
+        <div *ngFor="let country of countries" class="shadow-lg col-sm-4 p-3">
+            <div class="card">
+                <img class="photo" src="{{country.flags.png}}"  >
+                <h5>{{country.name.common}}</h5>
+                <button type="button" style="width: 150px;" class="btn btn-primary" routerLink="/Details" (click)="addToDetails(country)">plus de détails</button>  
+            </div>
+    
+        </div>
+    </div>
+</ng-container>

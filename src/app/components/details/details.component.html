@@ -1,0 +1,16 @@
+<button class="btn btn-primary" (click)="returnVide()" style="margin-left: 93%;"  routerLink="/Pays" >Retour</button>
+<div class="row">
+    <div class="col-8" *ngFor="let item of Details" style="margin-left: 50%; margin-top: 50px;">
+        <h5>{{item.name.official}}:</h5>
+        <img class="photo" src="{{item.flags.png}}" style="margin-left: 50%;" >
+        <h5>Informations</h5>
+        <ol class="list-group col-9" >
+            <li class="list-group-item" style="background-color: #DEF3FD;" > <strong>Name: </strong> {{item.name.common}}</li>
+            <li class="list-group-item" ><strong>Capital:</strong> {{item.capital}}</li>
+            <li class="list-group-item" style="background-color: #DEF3FD;" ><strong>Region: </strong> {{item.region}}</li>
+            <li class="list-group-item" ><strong>Population: </strong> {{item.population}}</li>
+            <li class="list-group-item" style="background-color: #DEF3FD;" ><strong>Area: </strong> {{item.area}}</li>
+            <li class="list-group-item" ><strong>Languages: </strong> {{item.languages.ara}}</li>
+        </ol>
+    </div>
+</div>
